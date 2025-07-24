@@ -86,7 +86,7 @@ export default function Project() {
               </div>
               <div className="mt-5 flex flex-col">
                 <div className="text-muted-foreground text-sm">Tipe Unit</div>
-                <div className="mt-2 flex items-center gap-2">
+                <div className="mt-2 flex items-center gap-2 overflow-auto">
                   <ArrayMap
                     of={item.tipe}
                     render={(item, index) => (
