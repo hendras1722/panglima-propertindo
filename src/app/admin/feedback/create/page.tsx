@@ -15,9 +15,8 @@ import { useComputed } from '@/composable/useComputed'
 import { If } from '@/components/atoms/if'
 import { useApi } from '@/composable/useApi'
 import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
-const SUPPORTED_FORMATS = ['image/jpeg', 'image/png']
-const MAX_FILE_SIZE_MB = 2
 const MAX_FILES = 5
 
 const formSchema = yup.object().shape({
@@ -45,6 +44,9 @@ export default function Page() {
     defaultValues: {
       image: [{ file: null }],
       unit: '',
+      category: '',
+      sub_category: '',
+      feedback: '',
     },
   })
 
@@ -53,15 +55,16 @@ export default function Page() {
     name: 'image',
   })
 
+  const watchedCategory = form.watch('category')
   const fieldsComputed = useComputed(() => fields)
-  const id_category = useComputed(() => form.watch('category'))
-  console.log(id_category.value, 'inicategoryValueComputed')
+  const id_category = useComputed(() => watchedCategory)
 
   const sub_category = useApi<SubCategory[]>({
     url: '/feedback-sub-category',
     params: {
       id_category: id_category.value,
     },
+    queryKey: ['feedback-sub-category', id_category.value],
     enabled: !!id_category.value,
   })
 

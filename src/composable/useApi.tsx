@@ -66,6 +66,7 @@ export function useApi<TResponse, TBody = unknown>(
     staleTime,
     refetchOnWindowFocus: autoRefetchOnWindowFocus,
   })
+
   const queryGet = useQueryEvents(queryResult, {
     onSuccess: (data) => {
       console.log('✅ success:', data)
