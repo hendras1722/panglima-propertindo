@@ -103,7 +103,7 @@ export default function Page() {
         duration: 3000,
         richColors: true,
       })
-      router.push('/admin/feedback')
+      router.push('/feedback')
     },
   })
 

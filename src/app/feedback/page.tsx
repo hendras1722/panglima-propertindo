@@ -106,7 +106,7 @@ export default function Page() {
             color: 'primary',
             size: 'lg',
             onClick: () => {
-              router.push('/admin/feedback/create')
+              router.push('/feedback/create')
             },
           }}
         >
@@ -216,7 +216,7 @@ export default function Page() {
           of={getItems.value ?? []}
           render={(item, index) => (
             <button
-              onClick={() => router.push(`/admin/feedback/${item.tiket}`)}
+              onClick={() => router.push(`/feedback/${item.tiket}`)}
               key={index + 'product'}
               className="p-4 bg-white rounded"
             >

@@ -92,7 +92,7 @@ export default function NavbarLanding() {
         <Button
           variant={'default'}
           size={'sm'}
-          onClick={() => router.push('/admin/feedback')}
+          onClick={() => router.push('/feedback')}
         >
           Masuk
         </Button>

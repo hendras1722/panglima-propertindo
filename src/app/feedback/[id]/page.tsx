@@ -73,7 +73,7 @@ export default function Page() {
         <Button
           variant={'default'}
           className="bg-white text-primary border border-primary min-w-fit hover:bg-white hover:text-primary hover:shadow-lg"
-          onClick={() => router.push('/admin/feedback')}
+          onClick={() => router.push('/feedback')}
         >
           <ChevronLeft />
         </Button>

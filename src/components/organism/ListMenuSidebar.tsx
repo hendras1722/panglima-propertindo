@@ -17,10 +17,10 @@ export default function ListMenuSidebar({
       <div className="space-y-1">
         <If condition={!sidebarCollapsed}>
           <Button
-            variant={pathName === '/admin/feedback' ? 'default' : 'ghost'}
+            variant={pathName === '/feedback' ? 'default' : 'ghost'}
             className={`!shadow-none !w-full flex !justify-start`}
-            color={pathName === '/admin/feedback' ? 'primary' : 'inherit'}
-            onClick={() => router.push('/admin/feedback')}
+            color={pathName === '/feedback' ? 'primary' : 'inherit'}
+            onClick={() => router.push('/feedback')}
           >
             {!sidebarCollapsed && (
               <>
@@ -31,41 +31,15 @@ export default function ListMenuSidebar({
           <Else key="else-1">
             <Button
               aria-label="dashboard"
-              variant={pathName === '/admin/feedback' ? 'default' : 'ghost'}
-              color={pathName === '/admin/feedback' ? 'primary' : 'default'}
-              onClick={() => router.push('/admin/feedback')}
+              variant={pathName === '/feedback' ? 'default' : 'ghost'}
+              color={pathName === '/feedback' ? 'primary' : 'default'}
+              onClick={() => router.push('/feedback')}
             >
               <MessagesSquare />
             </Button>
           </Else>
         </If>
       </div>
-      {/* 
-
-      <div className="space-y-1">
-        <If condition={!sidebarCollapsed}>
-          <Button
-            variant={pathName === '/admin/logout' ? 'contained' : 'text'}
-            onClick={handleLogout}
-            startIcon={<LogOut />}
-            size="small"
-            className={`!shadow-none !w-full flex !justify-start`}
-            classes={{
-              root:
-                pathName === '/admin/logout'
-                  ? 'group flex items-center gap-1 !px-3 !py-2 text-sm font-medium rounded-lg transition-colors duration-150 !text-black hover:!bg-primary-600 !text-white'
-                  : '!text-black  !px-3 !py-2',
-            }}
-          >
-            {!sidebarCollapsed && 'logout'}
-          </Button>
-          <Else key="else-1">
-            <IconButton onClick={handleLogout} aria-label="dashboard">
-              <LogOut />
-            </IconButton>
-          </Else>
-        </If>
-      </div> */}
     </nav>
   )
 }
