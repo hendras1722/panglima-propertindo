@@ -92,7 +92,7 @@ export default function Project() {
                     render={(item, index) => (
                       <div
                         key={index + 'tipe'}
-                        className="rounded-full border border-accent px-2 py-1 text-sm bg-accent/10 w-fit"
+                        className="rounded-full border border-accent px-2 py-1 text-sm bg-accent/10 w-fit text-nowrap"
                       >
                         {item}
                       </div>
