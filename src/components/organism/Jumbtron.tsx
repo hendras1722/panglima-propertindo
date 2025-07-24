@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import { Button } from '../ui/button'
 import Frame from '@/assets/img/frame.png'
-import Jumbotron from '@/assets/img/jumbotron.png'
 import { cn } from '@/lib/utils'
 
 export default function JumbotronPage() {
@@ -12,7 +11,7 @@ export default function JumbotronPage() {
       id="jumbtron"
       className={cn(
         'flex items-center justify-start h-[532px] relative',
-        `bg-[url('@/assets/img/jumbotron.png')] bg-cover bg-bottom bg-no-repeat`
+        `bg-[url(/jumbotron.png)] bg-cover bg-bottom bg-no-repeat`
       )}
     >
       <div>
@@ -54,16 +53,6 @@ export default function JumbotronPage() {
           </Button>
         </div>
       </div>
-      {/* <div className="w-[299px] h-full bg-[#F4F4F5]"></div> */}
-      {/* <Image
-        src={Jumbotron}
-        width={0}
-        height={532}
-        className="w-full h-full"
-        objectFit="cover"
-        unoptimized
-        alt="jumbtron"
-      /> */}
     </section>
   )
 }

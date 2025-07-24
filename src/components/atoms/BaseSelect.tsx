@@ -48,7 +48,7 @@ export default function BaseSelect({
           <ArrayMap
             of={items}
             render={(item, index) => (
-              <SelectItem key={index} value={item.value}>
+              <SelectItem key={index} value={String(item.value)}>
                 {item.label}
               </SelectItem>
             )}

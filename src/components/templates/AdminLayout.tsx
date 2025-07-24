@@ -142,7 +142,6 @@ const AdminLayout = ({ children }: { readonly children: React.ReactNode }) => {
       >
         <Navbar
           toggleSidebar={toggleSidebar}
-          getMe={getMe}
           sidebarCollapsed={sidebarCollapsed}
         />
 

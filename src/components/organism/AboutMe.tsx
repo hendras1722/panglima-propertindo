@@ -36,7 +36,7 @@ export default function AboutMe() {
           Lingkungan yang Baik.
         </p>
       </div>
-      <div className='bg-[url("@/assets/img/aboutme.png")] bg-white p-[20px] rounded-lg relative mt-[40px] mx-[40px]'>
+      <div className="bg-[url(/aboutme.png)] bg-white p-[20px] rounded-lg relative mt-[40px] mx-[40px]">
         <div className="absolute top-0 left-0 w-full h-full bg-[#2123228A] opacity-55 rounded-lg"></div>
 
         <div className="grid grid-cols-5 grid-rows-1 gap-4  px-[40px] py-[96px] text-center relative">

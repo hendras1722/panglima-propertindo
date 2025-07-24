@@ -50,7 +50,7 @@ export default function WhyMe() {
   return (
     <section
       id="whyme"
-      className='bg-[url("@/assets/img/bg-about.png")] bg-[#282835] md:px-[120px] px-[20px] py-[80px] text-white'
+      className='bg-[url("/whyme.png")] bg-[#282835] md:px-[120px] px-[20px] py-[80px] text-white'
     >
       <div className="flex md:flex-row flex-col items-center text-left gap-4 text-primary-foreground">
         <div className="text-[30px] font-bold leading-[36px]">
