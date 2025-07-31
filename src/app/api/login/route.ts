@@ -7,7 +7,7 @@ import { BaseResponse } from '@/type/baseResponse'
 export async function POST(request: NextRequest) {
   const body: LoginRequest = await request.json()
 
-  const res = await fetch('https://auth.syahendra.com/login', {
+  const res = await fetch('https://api.nanspace.top/api/auth/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
