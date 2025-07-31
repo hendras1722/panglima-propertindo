@@ -57,7 +57,6 @@ export default function Page() {
         })?.[0] as List) ?? {}
     )
   })
-  console.log(getItems.value)
   const router = useRouter()
   if (isPending) return <FeedbackDetailSkeleton />
   return (
